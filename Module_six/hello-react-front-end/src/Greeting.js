@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getHelloDispatcher } from './redux/greet';
+import { getHelloDispatcher } from './redux/hello';
 
 const HelloWorld = () => {
   const userDispatcher = useDispatch();
-  const greeting = useSelector((state) => state.helloReducer.greeting || '');
+  const greeting = useSelector((state) => state.greetingReducer.greeting || '');
 
   const handleClick = () => {
     userDispatcher(getHelloDispatcher());
@@ -12,7 +12,10 @@ const HelloWorld = () => {
 
   return (
     <div>
-      <h1>{greeting}</h1>
+      <h1>
+        Greeting :
+        {greeting}
+      </h1>
       <button type="submit" onClick={handleClick}>Click Me</button>
     </div>
   );

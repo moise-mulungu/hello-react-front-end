@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import helloReducer from './greet';
+import greetingReducer from './hello';
 
 const reducer = combineReducers({
-  helloReducer,
+  greetingReducer,
 });
 
 const store = configureStore({

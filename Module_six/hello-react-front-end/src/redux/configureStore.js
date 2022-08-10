@@ -1,8 +1,8 @@
-import { combineReducer } from 'redux';
+import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import helloReducer from './greet';
 
-const reducer = combineReducer({
+const reducer = combineReducers({
   helloReducer,
 });
 
